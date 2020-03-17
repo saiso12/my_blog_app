@@ -1,0 +1,24 @@
+How I created this app:
+
+    - Set the initial flask python project in virtualenv
+    - create routes in app.py -> routes will do a corresponding action on the UI using render_template
+      and updates the HTML file using jinja2 render_template
+    - Our app use register and login . So we use WTFforms.
+    - POST endpoints -> hit the route -> updates the forms using jinja2 render_template
+    - We use one parent HTML file and use jinja2 template inheritance
+    - We use code snippets for CSS and HTML (nav bars)
+    - Forms: Create class variables for WTFforms class (forms.py)  -> class variables are for placeholders for userinput to the forms
+    - Same goes for login route -> WTFforms objects -> pass it to render_template -> fit at the appropriate position in HTML
+    - We use SQL Alchemy for ORM for dev . When we deploy in production we use POSTgres DB (Python class -> Tables && Instaces --> rows)
+    - One --> Many Relationship DB. One user can have multiple posts and not true vice versa
+    - 
+    - 
+    - 
+
+
+
+
+    TODO:
+    =====
+
+    1. 
