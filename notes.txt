@@ -11,8 +11,9 @@ How I created this app:
     - Same goes for login route -> WTFforms objects -> pass it to render_template -> fit at the appropriate position in HTML
     - We use SQL Alchemy for ORM for dev . When we deploy in production we use POSTgres DB (Python class -> Tables && Instaces --> rows)
     - One --> Many Relationship DB. One user can have multiple posts and not true vice versa
-    - 
-    - 
+    - User authentication using flask-Bcrypt
+    - Validate if the username or password already entered
+    - Login : flask-login extention for manging user sessions
     - 
 
 
