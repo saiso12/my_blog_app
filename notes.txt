@@ -23,3 +23,48 @@ How I created this app:
     =====
 
     1. 
+
+    DEPLOYMENT ON Linux Ubuntu Server:
+    ===================================
+
+    1. Ubuntu node running on Linode
+    2. Create sudo users 
+    3. git clone the source code from the github Repo 
+    4. create venv and install requirements
+    5. Create config file (equivalent to env variables in local env)
+    6. Tweak the config.py for the application to fetch it as dict key
+    7. export FLASK_APP=run.py
+    8. flask run --host-0.0.0.0
+    9. Install nginix and gunicorn
+    10. sudo rm /etc/nginx/sites-enabled/default 
+    11. Create flask app specfic config for nginx. Let nginx handle static files and gunicorn handle flask specfic python codes
+    12. sudo ufw allow http/tcp 
+    13. disallow traffic on 5000
+    14. sudo systemctl restart nginx
+    15. gunicorn -w 3 run:app (gunicorn workers 3 ( num of cores * 2 + 1) nproc --all to find number of cores in the machine)
+    16. sudo apt install supervisor ==> To keep gunicorn up and running and handle restarts when the app crashes
+    17. /etc/supervisor/conf.d/flaskblog.conf => supervisor config
+    18. sudo mkdir -p /var/log/my_blog_app
+    19. sudo touch /var/log/my_blog_app/flaskblog.err.log
+    20. sudo touch /var/log/my_blog_app/flaskblog.out.log
+    21. sudo supervisorctl reload
+    22. tweak the updload size by changing the nginx config file : /etc/nginx/nginx.conf
+    
+
+    Registering DNS:
+    ===============
+
+    https://www.linode.com/docs/platform/manager/dns-manager/
+
+      - mocksre.com is purchased at namecheap.com
+      - Add the linode nameservers to the domain that you purchased
+      - 
+
+    Securing Your APP:
+    ==================
+
+    - https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx
+    - Run certbot
+    - ALlow https sudo ufw allow https
+    - Automatic renewal 
+    - 
