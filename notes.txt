@@ -14,15 +14,7 @@ How I created this app:
     - User authentication using flask-Bcrypt
     - Validate if the username or password already entered
     - Login : flask-login extention for manging user sessions
-    - 
-
-
-
-
-    TODO:
-    =====
-
-    1. 
+    
 
     DEPLOYMENT ON Linux Ubuntu Server:
     ===================================
