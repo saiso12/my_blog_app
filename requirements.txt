@@ -27,4 +27,3 @@ wcwidth==0.1.9
 Werkzeug==1.0.0
 WTForms==2.2.1
 zipp==3.1.0
-sai==12.3
