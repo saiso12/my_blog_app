@@ -59,4 +59,4 @@ How I created this app:
     - Run certbot
     - ALlow https sudo ufw allow https
     - Automatic renewal 
-    - 
+    - Check using openssl command
